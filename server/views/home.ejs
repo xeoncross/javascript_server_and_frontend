@@ -1,0 +1,29 @@
+<html>
+<head>
+  <style media="screen">
+    body {
+      background: #333;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+			padding: 2em;
+      margin: 2em auto;
+      width: 500px;
+      background: white;
+    }
+  </style>
+<body>
+  <main>
+		<h1>Express Server</h1>
+
+		<% if (!user) { %>
+			<p>Welcome! Please <a href="/login">log in</a>.</p>
+		<% } else { %>
+			<p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+		<% } %>
+
+		<p>Visit the <a href="/any/url/not/matched/by/express">React/Vue/Angular</a> frontend.</p>
+	</main>
+</body>
+</html>
