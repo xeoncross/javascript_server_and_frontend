@@ -16,7 +16,8 @@
     "url": "git://github.com/Xeoncross/javascript_server_and_frontend.git"
   },
   "scripts": {
-    "start": "nodemon --ignore './client/' server/server.js"
+    "start": "nodemon --ignore './client/' server/server.js",
+    "production": "NODE_ENV=production node server/server.js",
   },
   "bugs": {
     "url": "https://github.com/Xeoncross/javascript_server_and_frontend/issues"

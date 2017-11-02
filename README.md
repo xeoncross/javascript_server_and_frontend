@@ -10,7 +10,7 @@ Writing a [Javascript server is easy](http://expressjs.com/). So is starting a [
 
 We are building an express server that will tunnel requests to `create-react-app` when in development, and serve compiled assets in production. In addition this server will handle auth and provide an API for the frontend.
 
-During development, most people simply add a `proxy: http://localhost:3000` line to their `create-react-app` `package.json`. We don't want to do that because that means our express server simply becomes an API instead of the actual server like it will be when we build
+During development, most people simply add a `proxy: http://localhost:3000` line to their `create-react-app` `package.json`. We don't want to do that because that means our express server simply becomes an API instead of the actual server like it will be when we build.
 
 ## Instructions
 
@@ -36,7 +36,81 @@ cd client
 npm install
 ```
 
+Next, replace the `client/src/App.js` file with the following contents so it will show authentication status.
+
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = { user: null };
+  }
+
+  componentDidMount() {
+    fetch('/api/user', { credentials: 'same-origin' })
+      .then(res => res.json())
+      .then((res) => {
+        this.setState({ user: res.user });
+      });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <div className="App-intro" style={{width: '500px', margin:'0 auto'}}>
+          <p>To get started, edit <code>src/App.js</code> and save to reload.</p>
+          <p><a href="/">back to express server</a></p>
+          <pre style={{textAlign: "left", background: "#eee"}}>{JSON.stringify(this.state.user, null, 2)}</pre>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 Whatever client you use, make sure it installs into the `client` folder and that when you `build` the static assets it places them inside `client/build`. You also need it to run on port 3000 or adjust the proxy port in `server/server.js`.
+
+## Run
+
+Now we can start our express server.
+
+```bash
+node server/server.js
+```
+
+You can also run `npm start` which will run the server with [nodemon](https://nodemon.io/). Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
+
+Next, start our react app (which is a webpack/babel development server itself)
+
+```bash
+cd client
+npm start
+```
+
+## Deployment
+
+To deploy our server into production we will have `create-react-app` built a complete app bundle.
+
+```bash
+npm build
+```
+
+Then push the code to your server and simply start the `server/server.js` and tell it your in production mode.
+
+    NODE_ENV=production node server/server.js
+
+To save you time, the command is already in your `package.json` file. Run your server in production:
+
+    npm run production
 
 ## Technologies
 
