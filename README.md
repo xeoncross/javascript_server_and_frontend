@@ -144,6 +144,18 @@ If you are using Atom / Atom IDE you should install the plugins to read `.eslint
 
 ## Reference
 
+### Frameworks that do this for you
+
+- https://www.meteor.com/
+- https://github.com/jedireza/aqua
+- https://github.com/kriasoft/react-starter-kit/
+- https://github.com/react-boilerplate/react-boilerplate
+
+### Frameworks that do some (no client hot-reloading)
+
+- https://feathersjs.com/
+- https://github.com/zeit/next.js/
+
 ### Tutorials and Guides
 
 - https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/04-webpack-react-hmr.md#readme
@@ -155,9 +167,6 @@ If you are using Atom / Atom IDE you should install the plugins to read `.eslint
 
 - https://github.com/glenjamin/ultimate-hot-reloading-example
 - https://github.com/nylas/nylas-mail/blob/master/packages/cloud-api/app.es6
-- https://github.com/zeit/next.js
-- https://github.com/kriasoft/react-starter-kit
-- https://github.com/react-boilerplate/react-boilerplate
 - https://github.com/Xeoncross/aqua-sql
 - https://github.com/velopert/react-express-hmr-example
 - https://github.com/madole/webpack-dev-middleware-boilerplate
