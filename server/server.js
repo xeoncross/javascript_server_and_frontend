@@ -3,8 +3,6 @@ const passport = require('passport');
 const path = require('path');
 const proxy = require('http-proxy-middleware');
 const auth = require('./auth');
-// const partials = require('express-partials');
-
 
 // Create a new Express application.
 const app = express();
@@ -13,7 +11,6 @@ app.set('port', process.env.PORT || 3001);
 // Configure view engine to render EJS templates.
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// app.use(partials()); // Support layouts
 
 // Use application-level middleware for common functionality, including
 // logging, parsing, and session handling.

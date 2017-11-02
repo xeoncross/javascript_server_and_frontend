@@ -141,3 +141,29 @@ Then we create an `.eslintrc` file in our project root so our text-editor or IDE
 If you are using Atom / Atom IDE you should install the plugins to read `.eslintrc` files straight from your editor.
 
     apm install linter linter-eslint prettier-atom
+
+## Reference
+
+### Tutorials and Guides
+
+- https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/04-webpack-react-hmr.md#readme
+- https://github.com/netpoetica/react-router-passport-express-demo-app
+- https://github.com/Alex-ray/v2-universal-js-hmr-ssr-react-redux/blob/master/package.json
+- https://www.akawebdesign.com/2016/04/08/hot-reloading-react-webpack-express/
+
+### Example Server + Client Projects
+
+- https://github.com/glenjamin/ultimate-hot-reloading-example
+- https://github.com/nylas/nylas-mail/blob/master/packages/cloud-api/app.es6
+- https://github.com/zeit/next.js
+- https://github.com/kriasoft/react-starter-kit
+- https://github.com/react-boilerplate/react-boilerplate
+- https://github.com/Xeoncross/aqua-sql
+- https://github.com/velopert/react-express-hmr-example
+- https://github.com/madole/webpack-dev-middleware-boilerplate
+
+### Other Resources
+
+- https://github.com/topics/react
+- https://github.com/enaqx/awesome-react
+- https://vimeo.com/168648012
