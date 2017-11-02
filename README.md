@@ -101,6 +101,7 @@ npm start
 To deploy our server into production we will have `create-react-app` built a complete app bundle.
 
 ```bash
+cd client
 npm build
 ```
 
@@ -139,4 +140,4 @@ Then we create an `.eslintrc` file in our project root so our text-editor or IDE
 
 If you are using Atom / Atom IDE you should install the plugins to read `.eslintrc` files straight from your editor.
 
-    $ apm install linter linter-eslint prettier-atom
+    apm install linter linter-eslint prettier-atom
